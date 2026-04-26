@@ -1,2 +1,2 @@
 # Code-Verdant-by-SennaBytes
-Portfolio Project i started in April 2026.
+Portfolio Project I started in April 2026.
