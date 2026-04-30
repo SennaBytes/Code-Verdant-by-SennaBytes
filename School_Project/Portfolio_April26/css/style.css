@@ -1,0 +1,132 @@
+/* ===================================
+   Project: [Portfolio | Senna Klijn]
+   File: style.css
+   Author: [Senna Klijn]
+   Description: Main stylesheet
+   =================================== */
+
+ /* ==========================
+         page styling
+   ======================== */
+
+/* variable styling */
+      :root {
+      /* colors */
+         --color-bg: #0E0758;
+         --color-title: #c43cff;
+         --color-text: #ffffff;
+         /* --color--: x; */
+
+      /* fonts */
+         --font-title: "Sekuya";
+         --font-hdr: "Saira Stencil One";
+         --font-body:  "Ubuntu";
+
+      /* index layers */
+         --index-bg: 2;     /* background */
+         --index-mb: 4;     /* middle background */
+         --index-mm: 6;     /* middle middle */
+         --index-mf: 8;     /* middle front */
+         --index-fr: 10;    /* front */
+      }
+
+
+/* reset */
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+/* body styling */
+      body {
+      /* viewport */
+         min-height: 100vh;
+         width: 100vw;
+         overflow-y: hidden;
+
+      /* background */
+         background: linear-gradient(90deg, #9100ff, #ff0000);
+
+      /* text */
+         font-family: var(--font-body);
+         color: var(--color-text)
+      }
+
+
+/* scrolling */
+      .scroll {
+         display: flex;
+         height: 100vh;
+         width: 100vw;
+      }
+
+/* index layers */
+      .bg {z-index: var(--index-bg);}
+      .mb {z-index: var(--index-mb);}
+      .mm {z-index: var(--index-mm);}
+      .mf {z-index: var(--index-mf);}
+      .fr {z-index: var(--index-fr);}
+
+index 
+      .bg, .mb, .mm, .mf, .fr {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100vw;
+         height: 100vh;
+      }
+      .bg {
+         min-width: 800vw !important;
+      }
+
+
+/* backgrounds */
+      
+      div {
+         background-color: #c43cff62;
+         width: 800px;
+         height: 500px;
+      }
+
+      .bg {
+         background-image: url(../assets/img/background/Group\ 1.png);
+      }
+      .mb {
+         x:x;
+      }
+      .mm {
+         x:x;
+      }
+      .mf {
+         x:x;
+      }
+      .fr {
+         x:x;
+      }
+      
+
+/* ==========================
+      content styling  
+========================== */
+
+
+
+/* fonts */
+      h1 {
+         font-family: var(--font-title);
+         color: var(--color-title);
+      }
+      h2 {
+         font-family: var(--font-hdr);
+      }
+      p {
+         font-family: var(--font-body);
+      }
+
+
+
+
+
+
+

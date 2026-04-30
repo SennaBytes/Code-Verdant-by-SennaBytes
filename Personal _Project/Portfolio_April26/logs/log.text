@@ -1,0 +1,186 @@
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻[CODE VERDANT — PROGRESS LOG]⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+
+===================================
+Project: [Portfolio | Senna Klijn]
+File: log.text
+Author: [Senna Klijn]
+Description: Progress Log
+===================================
+
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻[APRIL 17, 2026]⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+
+CONCEPT
+
+* Interactive portfolio world
+* Forest-themed horizontal scrolling experience
+* Camera-based navigation through layered depth (not standard webpage scroll)
+
+⸻
+
+STRUCTURE
+
+HTML
+
+* 5 layers implemented:
+    * .bg → background / identity layer
+    * .mb → middle background
+    * .mm → main content layer
+    * .mf → near interaction layer
+    * .fr → front / UI layer
+* All layers wrapped in main.scroll
+* Script loaded with defer to ensure DOM availability
+
+⸻
+
+CSS SYSTEM
+
+Core styling
+
+* Dark base color: #0E0758
+* Typography system:
+    * H1: Sekuya (title / identity)
+    * H2: Saira Stencil One (structure / headers)
+    * P: Ubuntu (body text)
+
+Layer system
+
+* Z-index structure: 2 / 4 / 6 / 8 / 10
+* Each layer:
+    * position: absolute
+    * full viewport height
+    * extended width (~300vw)
+
+Layout intent
+
+* Horizontal world instead of vertical page scroll
+* Background image used as forest environment base
+
+⸻
+
+JAVASCRIPT SYSTEM
+
+Core mechanics
+
+* Wheel input via deltaY
+* Camera system with two-state model:
+    * target = desired scroll position
+    * current = smoothed actual position
+
+Physics
+
+* Easing-based motion:
+    current += (target - current) * 0.08
+
+Scroll limits
+
+* Initial fixed maxScroll replaced with dynamic value:
+    scrollWidth - innerWidth
+
+Parallax system
+
+* Layer movement speeds:
+    * bg → slowest
+    * mb → slow
+    * mm → medium
+    * mf → fast
+    * fr → fastest
+* Creates depth illusion through differential translation
+
+⸻
+
+FIXES COMPLETED
+
+* Script loading fixed using defer
+* Variable duplication issues resolved
+* Scroll limit corrected from static value to dynamic world width
+* Scroll sensitivity adjusted (deltaY scaling)
+* Layer naming consistency aligned across CSS/JS/HTML
+
+⸻
+
+CURRENT SYSTEM STATE
+
+* Functional camera-based scrolling system implemented
+* Smooth interpolation between scroll states
+* Multi-layer parallax depth simulation active
+* World behaves as a continuous horizontal environment rather than static page
+
+⸻
+
+NEXT DEVELOPMENT STEPS
+
+* Add atmospheric depth (fog, blur per layer)
+* Add interactive objects in mf layer
+* Define forest zones / segmented navigation areas
+* Improve mobile / touch input handling
+* Implement world boundary transition behavior
+
+⸻
+
+NEXT SESSION OPTIONS
+
+* ￼ System architecture diagram
+* ￼ Visual mapping of layer content (world design planning)
+* ￼ Engine refactor into reusable module structure
+
+
+
+    TO DO NEXT:
+        - Fix cam moition to bg-full-frame of img
+        - Continue sketching trees
+        - Find fog img (use div as substitute for understanding of layers)
+
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻[APRIL xx, 2026]⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+
+    x
+
+    TO DO NEXT:
+        - x
+
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻[APRIL xx, 2026]⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+
+    x
+
+    TO DO NEXT:
+        - x
+
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻[APRIL xx, 2026]⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+
+    x
+
+    TO DO NEXT:
+        - xx
+
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻[APRIL xx, 2026]⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+
+    x
+
+    TO DO NEXT:
+        - xx
+
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻[APRIL xx, 2026]⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+
+    x
+
+    TO DO NEXT:
+        - Find audio for mouseclicks, animations, etc events.
+
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻[APRIL xx, 2026]⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+
+
+
