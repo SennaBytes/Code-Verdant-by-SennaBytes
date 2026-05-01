@@ -33,6 +33,9 @@ window.addEventListener("wheel", (e) => {
    target = Math.max(0, Math.min(target, maxScroll));
    current = Math.max(0, Math.min(current, maxScroll));
 
+   console.log(target)
+   console.log(current)
+
 }, { passive: false });
 
 // Scrolling Animation function
@@ -47,11 +50,12 @@ function scrollAni() {
    fr.style.transform = `translateX(${-current * -1}px)`;
 
    requestAnimationFrame(scrollAni);
+   // checkt frames ^ x
 }
 
 scrollAni();
 
-
+console.log(scrollAni())
 
 
 
