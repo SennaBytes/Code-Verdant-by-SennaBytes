@@ -20,7 +20,7 @@ const fr = document.querySelector(".fr");
 const world = document.querySelector(".bg");
 const maxScroll = world.scrollWidth - window.innerWidth;
 
-const ease = 0.08;
+const ease = 0.09;
 let target = 0;
 let current = 0;
 
@@ -44,7 +44,7 @@ function scrollAni() {
    mb.style.transform = `translateX(${-current * 0.2}px)`;
    mm.style.transform = `translateX(${-current * -0.5}px)`;
    mf.style.transform = `translateX(${-current * 0.8}px)`;
-   fr.style.transform = `translateX(${-current * -1.5}px)`;
+   fr.style.transform = `translateX(${-current * -1}px)`;
 
    requestAnimationFrame(scrollAni);
 }
