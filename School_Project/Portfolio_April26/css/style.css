@@ -68,7 +68,7 @@
       .mf {z-index: var(--index-mf);}
       .fr {z-index: var(--index-fr);}
 
-index 
+/* index  */
       .bg, .mb, .mm, .mf, .fr {
          position: absolute;
          top: 0;
@@ -83,7 +83,31 @@ index
 
 /* backgrounds */
       
-      div {
+      .div1 {
+         background-color: #ff000062;
+         width: 800px;
+         height: 500px;
+      }
+
+      .div2 {
+         background-color: #ff800062;
+         width: 800px;
+         height: 500px;
+      }
+
+      .div3 {
+         background-color: #66ff0062;
+         width: 800px;
+         height: 500px;
+      }
+
+      .div4 {
+         background-color: #00b7ff62;
+         width: 800px;
+         height: 500px;
+      }
+
+      .div5 {
          background-color: #c43cff62;
          width: 800px;
          height: 500px;
