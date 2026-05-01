@@ -1,5 +1,6 @@
 /* ===================================
    Project: [Portfolio | Senna Klijn]
+   "Portfolio"
    File: style.css
    Author: [Senna Klijn]
    Description: Main stylesheet
@@ -12,10 +13,17 @@
 /* variable styling */
       :root {
       /* colors */
-         --color-bg: #0E0758;
-         --color-title: #c43cff;
-         --color-text: #ffffff;
-         /* --color--: x; */
+         --color-bg: #e2dfd8; /* linear-gradient(90deg, #9100ff, #ff0000) */
+         --color-title: #efefef;          /* c43cff */
+
+         --color-text: #f2f2f2;
+      /* div colors */
+         --color-div0: #ccb9b9;
+         --color-div1: #ff6c6c;
+         --color-div2: #f9b26a;
+         --color-div3: #8bd092;
+         --color-div4: #71a4b8;
+         --color-div5: #a379b5;
 
       /* fonts */
          --font-title: "Sekuya";
@@ -28,6 +36,10 @@
          --index-mm: 6;     /* middle middle */
          --index-mf: 8;     /* middle front */
          --index-fr: 10;    /* front */
+
+      /* shadow colors */
+         --shadow-box: 5px 5px 3px rgba(0, 0, 0, 0.384);
+         --shadow-text: 2px 2px 2px rgba(0, 0, 0, 0.384);
       }
 
 
@@ -46,11 +58,11 @@
          overflow-y: hidden;
 
       /* background */
-         background: linear-gradient(90deg, #9100ff, #ff0000);
+         background: var(--color-bg);
 
       /* text */
          font-family: var(--font-body);
-         color: var(--color-text)
+         color: var(--color-text);
       }
 
 
@@ -72,47 +84,62 @@
       .bg, .mb, .mm, .mf, .fr {
          position: absolute;
          top: 0;
-         left: 0;
+         left: 200px;     
          width: 100vw;
          height: 100vh;
       }
       .bg {
-         min-width: 800vw !important;
+         min-width: 1000vw !important;
       }
 
 
 /* backgrounds */
-      
+      .div0 {
+         background-color:  var(--color-div0);
+         top: 25vh;
+         left: 27.5vw;
+      }
+
       .div1 {
-         background-color: #ff000062;
-         width: 800px;
-         height: 500px;
+         background-color:  var(--color-div1);
+         top: 50px;
+         left: 200px;
       }
 
       .div2 {
-         background-color: #ff800062;
-         width: 800px;
-         height: 500px;
+         background-color: var(--color-div2);
+         top: 125px;
+         left: 200px;         
       }
 
       .div3 {
-         background-color: #66ff0062;
-         width: 800px;
-         height: 500px;
+         background-color: var(--color-div3);
+         top: 200px;
+         left: 200px;         
       }
 
       .div4 {
-         background-color: #00b7ff62;
-         width: 800px;
-         height: 500px;
+         background-color:  var(--color-div4);
+         top: 275px;
+         left: 200px;
       }
 
       .div5 {
-         background-color: #c43cff62;
-         width: 800px;
-         height: 500px;
+         background-color:  var(--color-div5);
+         top: 350px;
+         left: 200px;         
       }
 
+      .div0, .div1, .div2, .div3, .div4, .div5 {
+         border-radius: 3%;
+         position: relative;
+         box-shadow: var(--shadow-box);
+         padding: 25px;
+         width: 40vw;
+         height: 50vh;
+      }
+
+      
       .bg {
          background-image: url(../assets/img/background/Group\ 1.png);
       }
