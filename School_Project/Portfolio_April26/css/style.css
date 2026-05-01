@@ -19,7 +19,7 @@
          --color-text: #f2f2f2;
       /* div colors */
          --color-div0: #ccb9b9;
-         --color-div1: #ff6c6c;
+         --color-div1: #ff8b8b;
          --color-div2: #f9b26a;
          --color-div3: #8bd092;
          --color-div4: #71a4b8;
@@ -89,7 +89,7 @@
          height: 100vh;
       }
       .bg {
-         min-width: 1000vw !important;
+         min-width: 1000px !important;
       }
 
 
