@@ -1,0 +1,230 @@
+/* ===================================
+   Project: [Portfolio | Senna Klijn]
+   "Portfolio"
+   File: style.css
+   Author: [Senna Klijn]
+   Description: Main stylesheet
+   =================================== */
+
+   
+ /* ==========================
+         page styling
+   ======================== */
+
+/* variable styling */
+      :root {
+      /* colors */
+         --color-bg: #e2dfd8; /* linear-gradient(90deg, #9100ff, #ff0000) */
+         --color-title: #efefef;          /* c43cff */
+
+         --color-text: #f2f2f2;
+      /* div colors */
+         --color-card1: #ff8b8b;
+         --color-card2: #f9b26a;
+         --color-card3: #f9df6a;
+         --color-card4: #8bd092;
+         --color-card5: #88c4dc;
+         --color-card6: #a379b5;
+
+      /* index layers */
+         /* --index-back: 0;       background */
+         /* --index-middle: 50;    middle */
+         /* --index-front: 100;    front */
+
+      /* fonts */
+         --font-title: "Sekuya";
+         --font-hdr: "Saira Stencil One";
+         --font-body:  "Ubuntu";
+
+      /* shadow colors */
+         --shadow-box: 6px 6px 10px rgba(108, 74, 74, 0.384);
+         --shadow-text: 2px 2px 2px rgba(108, 74, 74, 0.384);
+      }
+
+
+/* body reset */
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+
+         border: solid 1.5px #000;
+      }
+
+/* body styling */
+      body {
+      /* viewport */
+         height: 100vh;
+         width: 100vw;
+         overflow-y: auto;
+         overflow-x: hidden;
+
+      /* display track */
+         display: flex;
+         flex-direction: column;
+
+      /* background */
+         background: var(--color-bg);
+
+      /* text */
+         font-family: var(--font-body);
+         color: var(--color-text);
+      }
+
+
+/* page markup styling */
+      .header, .footer {
+      /* display track */
+         display: flex;
+         flex-direction: row;
+         justify-content: space-around;
+         align-items: center;
+         gap: 50%;
+
+         min-height: 80px;
+         width: 100vw;
+      }
+
+      .main {
+         flex-grow: 1;
+      }
+
+/* index layers */
+      /* .back {z-index: var(--index-back);}
+      .middle {z-index: var(--index-middle);}
+      .front {z-index: var(--index-front);} */
+
+
+/* contact button */
+      .ctcBtn {
+         z-index: 110;
+         position: relative;
+         top: 300px;
+         left: 200px;
+         background-color: #71a4b8;
+      }
+
+
+/* ==========================
+      content styling  
+========================== */
+
+/* fonts */
+   h1 {
+      font-family: var(--font-title);
+      color: var(--color-title);
+   }
+   h2, h4 {
+      font-family: var(--font-hdr);
+   }
+   p {
+      font-family: var(--font-body);
+   }
+
+   /* links */
+   a {
+      text-decoration: none;
+      color: var(--font-body);
+   }
+
+/* ==========================
+      card styling  
+========================== */
+
+/* scrolling */
+.cardContainerX {
+   justify-self: center;
+
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   height: 70vh;
+   width: 95vw;
+   gap: 30px;
+
+   background-color: #f3f3f3;
+
+   overflow-y: hidden;
+   overflow-x: auto;
+   padding: 20px 5vw 20px 52vw;
+
+   border-radius: 5rem;
+}
+
+/* cards */
+
+.card {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+
+   margin: 10px;
+   padding: 20px;
+
+   border-radius: 2rem 2rem 6rem 2rem;
+   align-self: center;
+   box-shadow: var(--shadow-box);
+   padding: 2px;
+   min-width: 50%;
+   min-height: 50vh;
+
+   aspect-ratio: 2/1;
+}
+
+.card1 {
+   background-color:  var(--color-card1);
+}
+
+.card2 {
+   background-color: var(--color-card2);
+}
+
+.card3 {
+   background-color: var(--color-card3);
+}
+
+.card4 {
+   background-color:  var(--color-card4);
+}
+
+.card5 {
+   background-color:  var(--color-card5);
+}
+
+.card6 {
+   background-color:  var(--color-card6);
+} 
+
+
+/* title */
+.cardTitle {
+   color: var(--color-text);
+   font-weight: bold;
+
+}
+
+/* img */
+.cardImg {
+   width: 100%;
+   justify-self: center;
+   align-self: center;
+   object-fit: cover;
+   object-position: 0%;
+}
+.cardImgBorder {
+   width: 60%;
+   aspect-ratio: 2/1;
+   border: solid 1px #ff8b8b;
+   border-radius: 8px;
+}
+
+/* description */
+.cardText {
+   height: 30%;
+   color: var(--color-text);
+   font-weight: normal;
+}
+
+

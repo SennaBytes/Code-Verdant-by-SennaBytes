@@ -44,9 +44,9 @@ function scrollAni() {
    current += (target - current) * ease;
 
    bg.style.transform = `translateX(${-current * -0.2}px)`;
-   mb.style.transform = `translateX(${-current * 0.2}px)`;
-   mm.style.transform = `translateX(${-current * -0.5}px)`;
-   mf.style.transform = `translateX(${-current * 0.85}px)`;
+   mb.style.transform = `translateX(${-current * -0.4}px)`;
+   mm.style.transform = `translateX(${-current * -0.6}px)`;
+   mf.style.transform = `translateX(${-current * -0.8}px)`;
    fr.style.transform = `translateX(${-current * -1}px)`;
 
    requestAnimationFrame(scrollAni);
