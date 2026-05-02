@@ -17,7 +17,6 @@
          --color-bg-dark: #1d1d1d;
          --color-bg-light: #e2dfd8;
          
-         
          --color-title-dark: #1d1d1d;
          --color-title-light: #efefef;
 
@@ -44,7 +43,8 @@
 
       /* shadow colors */
          --shadow-box: 6px 6px 10px rgba(108, 74, 74, 0.384);
-         --shadow-text: 2px 2px 2px rgba(108, 74, 74, 0.384);
+   
+         --shadow-text: 2px 2px 2px rgb(255, 255, 255);
       }
 
 
@@ -75,6 +75,9 @@
       /* text */
          font-family: var(--font-body);
          color: var(--color-text);
+
+      /* cursor */
+      cursor: default;
       }
 
 
@@ -141,7 +144,7 @@
       color: var(--color-bg-dark);
    }
 
-   /* links */
+   /* links/ urls */
    a {
       text-decoration: none;
       color: var(--font-body);
@@ -151,7 +154,7 @@
 
 
 /* ==========================
-      card (container) styling  
+   card (container) styling  
 ========================== */
 
 /* scrolling */
@@ -196,58 +199,51 @@
    aspect-ratio: 2/1;
 }
 
-.card1 {
-   background-color:  var(--color-card1);
-}
-
-.card2 {
-   background-color: var(--color-card2);
-}
-
-.card3 {
-   background-color: var(--color-card3);
-}
-
-.card4 {
-   background-color:  var(--color-card4);
-}
-
-.card5 {
-   background-color:  var(--color-card5);
-}
-
-.card6 {
-   background-color:  var(--color-card6);
-} 
-
+.card1 {background-color:  var(--color-card1);}
+.card2 {background-color: var(--color-card2);}
+.card3 {background-color: var(--color-card3);}
+.card4 {background-color:  var(--color-card4);}
+.card5 {background-color:  var(--color-card5);}
+.card6 {background-color:  var(--color-card6);}
 
 /* title */
 .cardTitle {
-   color: var(--color-text);
-   font-weight: bold;
-
+   color: var(--color-bg-dark);
+   text-shadow: var(--shadow-text);
+   font-weight: bold;   
+   text-align: center;
+   width: 80%;
 }
 
 /* img */
 .cardImg {
-   width: 100%;
+   width: 120%;
    justify-self: center;
    align-self: center;
    object-fit: cover;
-   object-position: 0%;
+   object-position: -25px -25px;
 }
 .cardImgBorder {
-   width: 60%;
+   width: 80%;
    aspect-ratio: 2/1;
    border: solid 1px #ff8b8b;
    border-radius: 8px;
+   overflow: hidden;
 }
 
 /* description */
 .cardText {
    height: 30%;
+   width: 80%;
    color: var(--color-text);
    font-weight: normal;
 }
 
+/* card clicking */
+.card:hover {
+   cursor: grab;
+}
 
+.card:active {
+   cursor: grabbing;
+}
