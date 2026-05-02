@@ -13,12 +13,18 @@
 
 /* variable styling */
       :root {
-      /* colors */
-         --color-bg: #e2dfd8; /* linear-gradient(90deg, #9100ff, #ff0000) */
-         --color-title: #efefef;          /* c43cff */
+      /* general colors */
+         --color-bg-dark: #1d1d1d;
+         --color-bg-light: #e2dfd8;
+         
+         
+         --color-title-dark: #1d1d1d;
+         --color-title-light: #efefef;
 
-         --color-text: #f2f2f2;
-      /* div colors */
+         --color-text-dark: #1d1d1d;
+         --color-text-light: #f2f2f2;
+
+      /* card colors */
          --color-card1: #ff8b8b;
          --color-card2: #f9b26a;
          --color-card3: #f9df6a;
@@ -83,9 +89,12 @@
 
          min-height: 80px;
          width: 100vw;
+
+         background-color: var(--color-bg-dark);
       }
 
       .main {
+         background-color: var(--color-bg-light);
          flex-grow: 1;
       }
 
@@ -112,7 +121,6 @@
 /* fonts */
    h1 {
       font-family: var(--font-title);
-      color: var(--color-title);
    }
    h2, h4 {
       font-family: var(--font-hdr);
@@ -121,14 +129,29 @@
       font-family: var(--font-body);
    }
 
+   .heroText {
+      font-size: 3rem
+   }
+
+   .header, .footer {
+      color: var(--color-text-light);
+   }
+
+   .main {
+      color: var(--color-bg-dark);
+   }
+
    /* links */
    a {
       text-decoration: none;
       color: var(--font-body);
    }
 
+
+
+
 /* ==========================
-      card styling  
+      card (container) styling  
 ========================== */
 
 /* scrolling */
