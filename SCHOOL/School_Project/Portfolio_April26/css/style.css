@@ -31,11 +31,6 @@
          --color-card5: #88c4dc;
          --color-card6: #a379b5;
 
-      /* index layers */
-         /* --index-back: 0;       background */
-         /* --index-middle: 50;    middle */
-         /* --index-front: 100;    front */
-
       /* fonts */
          --font-title: "Sekuya";
          --font-hdr: "Saira Stencil One";
@@ -44,7 +39,11 @@
       /* shadow colors */
          --shadow-box: 6px 6px 10px rgba(108, 74, 74, 0.384);
    
-         --shadow-text: 2px 2px 2px rgb(255, 255, 255);
+         --shadow-text: 1.5px 1.5px 0px rgb(239, 239, 239);
+
+      /* borders */
+         --border-dark: solid 2px #1d1d1d;
+         --border-light: solid 2px #efefef;
       }
 
 
@@ -53,8 +52,6 @@
          margin: 0;
          padding: 0;
          box-sizing: border-box;
-
-         border: solid 1.5px #000;
       }
 
 /* body styling */
@@ -101,19 +98,14 @@
          flex-grow: 1;
       }
 
-/* index layers */
-      /* .back {z-index: var(--index-back);}
-      .middle {z-index: var(--index-middle);}
-      .front {z-index: var(--index-front);} */
-
-
 /* contact button */
       .ctcBtn {
          z-index: 110;
          position: relative;
          top: 300px;
          left: 200px;
-         background-color: #71a4b8;
+         background-color: var(--color-bg-light);
+         border: var(--border-dark)
       }
 
 
@@ -121,7 +113,7 @@
       content styling  
 ========================== */
 
-/* fonts */
+/* general text elements */
    h1 {
       font-family: var(--font-title);
    }
@@ -132,16 +124,30 @@
       font-family: var(--font-body);
    }
 
+/* specific text elements */
    .heroText {
       font-size: 3rem
    }
 
+
+/* specific page elements */
    .header, .footer {
       color: var(--color-text-light);
+      z-index: 100;
    }
+
+   .header {
+      box-shadow: 0px 10px 10px rgba(73, 57, 57, 0.2);
+   }
+
+   .footer {
+      box-shadow: 0px -10px 10px rgba(73, 57, 57, 0.2);
+   }
+
 
    .main {
       color: var(--color-bg-dark);
+      text-shadow: var(--shadow-text);
    }
 
    /* links/ urls */
@@ -175,7 +181,12 @@
    overflow-x: auto;
    padding: 20px 5vw 20px 52vw;
 
+   border: var(--border-dark);
    border-radius: 5rem;
+}
+
+.cardContainerX::-webkit-scrollbar {
+  display: none;
 }
 
 /* cards */
@@ -189,14 +200,19 @@
    margin: 10px;
    padding: 20px;
 
-   border-radius: 2rem 2rem 6rem 2rem;
    align-self: center;
+
    box-shadow: var(--shadow-box);
-   padding: 2px;
+   
    min-width: 50%;
    min-height: 50vh;
 
    aspect-ratio: 2/1;
+
+   border: var(--border-dark);
+   border-radius: 2rem 2rem 6rem 2rem;
+
+   transition: ease-in-out 30ms;
 }
 
 .card1 {background-color:  var(--color-card1);}
@@ -226,7 +242,7 @@
 .cardImgBorder {
    width: 80%;
    aspect-ratio: 2/1;
-   border: solid 1px #ff8b8b;
+   border: var(--border-dark);
    border-radius: 8px;
    overflow: hidden;
 }
@@ -237,13 +253,16 @@
    width: 80%;
    color: var(--color-text);
    font-weight: normal;
+   line-height: 1.5;
 }
 
-/* card clicking */
+/* card animations */
 .card:hover {
    cursor: grab;
+   transform: scale(1.1);
 }
 
 .card:active {
    cursor: grabbing;
+   transform: scale(1);
 }
