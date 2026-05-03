@@ -1,6 +1,6 @@
 /* ===================================
    Project: [Portfolio | Senna Klijn]
-   "Portfolio"
+   "School Portfolio"
    File: style.css
    Author: [Senna Klijn]
    Description: Main stylesheet
@@ -126,7 +126,7 @@
 
 /* specific text elements */
    .heroText {
-      font-size: 3rem
+      font-size: 2rem
    }
 
 
@@ -141,17 +141,33 @@
    }
 
    .footer {
+      font-size: 0.5rem;
       box-shadow: 0px -10px 10px rgba(73, 57, 57, 0.2);
    }
 
 
    .main {
       color: var(--color-bg-dark);
-      text-shadow: var(--shadow-text);
    }
 
-   /* links/ urls */
-   a {
+   .projectContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+
+   /* nav */
+   .mainNav {
+      height: 10%;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      text-wrap: wrap;
+   }
+   /* a-property and list items */
+   a, .listItems {
       text-decoration: none;
       color: var(--font-body);
    }
@@ -189,8 +205,29 @@
   display: none;
 }
 
-/* cards */
 
+/* cards - all items */
+
+/* colors */
+.card1 {background-color:  var(--color-card1);}
+.card2 {background-color: var(--color-card2);}
+.card3 {background-color: var(--color-card3);}
+.card4 {background-color:  var(--color-card4);}
+.card5 {background-color:  var(--color-card5);}
+.card6 {background-color:  var(--color-card6);}
+
+/* animations */
+.card:hover {
+   cursor: grab;
+   transform: scale(1.1);
+}
+
+.card:active {
+   cursor: grabbing;
+   transform: scale(1);
+}
+
+/* styling */
 .card {
    display: flex;
    flex-direction: column;
@@ -215,13 +252,6 @@
    transition: ease-in-out 30ms;
 }
 
-.card1 {background-color:  var(--color-card1);}
-.card2 {background-color: var(--color-card2);}
-.card3 {background-color: var(--color-card3);}
-.card4 {background-color:  var(--color-card4);}
-.card5 {background-color:  var(--color-card5);}
-.card6 {background-color:  var(--color-card6);}
-
 /* title */
 .cardTitle {
    color: var(--color-bg-dark);
@@ -233,7 +263,9 @@
 
 /* img */
 .cardImg {
-   width: 120%;
+   width: 100%;
+   min-width: 120%;
+   max-width: 200%;
    justify-self: center;
    align-self: center;
    object-fit: cover;
@@ -249,6 +281,7 @@
 
 /* description */
 .cardText {
+   margin: 30px;
    height: 30%;
    width: 80%;
    color: var(--color-text);
@@ -256,13 +289,17 @@
    line-height: 1.5;
 }
 
-/* card animations */
-.card:hover {
-   cursor: grab;
-   transform: scale(1.1);
+/* list */
+.cardNotes {
+   height: auto;
+   width: 80%;
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+   text-wrap: wrap;
+}
+.cardNotesItems {
+   font-size: 10%;
 }
 
-.card:active {
-   cursor: grabbing;
-   transform: scale(1);
-}

@@ -1,5 +1,6 @@
 /* ===================================
    Project: [Portfolio | Senna Klijn]
+   "School Portfolio"
    File: script.js
    Author: [Senna Klijn]
    Description: Main script
