@@ -171,7 +171,32 @@
    card (container) styling  
 ========================== */
 
-/* scrolling */
+/* proect container */
+.containerTitle {
+   height: 60px;
+   display: flex;
+   gap: 10px;
+   align-items: center;
+   justify-items: center;
+}
+
+/* project scroll prompter animation */
+  #iconNudge {
+   animation: nudge 5s ease-in-out infinite;
+   }
+
+   @keyframes nudge {
+   /* 0%, 60%, 100% {transform: translateX(0);} */
+
+   0% {transform: translateX(0px);}
+   10% {transform: translateX(10px);}
+   20% {transform: translateX(0px);}
+   50% {transform: translateX(0px);}
+   80% {transform: translateX(15px);}
+   100% {transform: translateX(0px);}
+   }
+
+/* cards container x-scrolling */
 .cardContainerX {
    justify-self: center;
 
@@ -197,8 +222,7 @@
   display: none;
 }
 
-
-/* cards - all items */
+/* cards - all styling */
 
 /* colors */
 .card1 {background-color:  var(--color-card1);}
