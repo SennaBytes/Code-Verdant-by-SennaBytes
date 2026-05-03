@@ -25,3 +25,24 @@
 
    });
 
+
+
+// span click
+const glr = document.querySelector("#glr");
+
+glr.addEventListener("click", () => {
+    window.open(
+        "https://www.glr.nl/opleidingen/software-developer",
+        "_blank",
+        "noopener,noreferrer"
+    );
+});
+
+
+// card anti hover ˜ (ensures mouse enter; default, mouse leave; "")
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+  card.addEventListener("mouseenter", () => card.style.cursor = "default");
+  card.addEventListener("mouseleave", () => card.style.cursor = "auto");
+});

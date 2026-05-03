@@ -48,3 +48,4 @@ card5.addEventListener("click", () => {window.open("https://www.figma.com/design
 card6.addEventListener("click", () => {window.open("https://103580.stu.sd-lab.nl/OpenDag/LJ1/Opdracht%207.2%202/home.html", "_blank");});
 
 
+
