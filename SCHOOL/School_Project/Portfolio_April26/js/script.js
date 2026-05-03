@@ -3,6 +3,7 @@
    "School Portfolio"
    File: script.js
    Author: [Senna Klijn]
+   Vital to: index.html
    Description: Main script
    =================================== */
 
